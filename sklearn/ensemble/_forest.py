@@ -381,9 +381,9 @@ class BaseForest(MultiOutputMixin, BaseEnsemble, metaclass=ABCMeta):
 
         if not self.bootstrap and self.max_samples is not None:
             raise ValueError(
-                "`max_sample` cannot be set if `bootstrap=False`. "
+                "`max_samples` cannot be set if `bootstrap=False`. "
                 "Either switch to `bootstrap=True` or set "
-                "`max_sample=None`."
+                "`max_samples=None`."
             )
         elif self.bootstrap:
             n_samples_bootstrap = _get_n_samples_bootstrap(
